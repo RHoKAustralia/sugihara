@@ -79,3 +79,9 @@ a {
 {
    font-size: 70% !important;
 }
+
+@media (max-width: 600px) {
+    #link {
+        font-size: 12px;
+    }
+}
