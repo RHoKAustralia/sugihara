@@ -187,7 +187,6 @@ Template.test.events({
       console.log("Submit clicked!");
       
       var linkRefTest = document.getElementById("link-test");
-      console.log(linkRefTest);
       var commentsRefTest = document.getElementById("comments-test");
       
       var nameRefTest = document.getElementById("name-test");
@@ -196,18 +195,18 @@ Template.test.events({
       var contactRefTest = document.getElementById("contact-test");
       
       var formData = JSON.parse(stringified);
+      console.log(linkRefTest);
     
       console.log(formData);
       
-      /*
-      var linkRefTest.value = formData.link;
-      var commentsRefTest.value = formData.comments;
       
-      var nameRefTest.value = formData.name;
-      var postcodeRefTest.value = formData.postcode;
-      var emailRefTest.value = formData.email;
-      var contactRefTest.value = formData.contact;
-      */
+      linkRefTest.value = formData.link;
+      commentsRefTest.value = formData.comments;
+      
+      nameRefTest.value = formData.name;
+      postcodeRefTest.value = formData.postcode;
+      emailRefTest.value = formData.email;
+      contactRefTest.value = formData.contact;
   },
       
   "click [data-action='polka']"(event, instance) {
