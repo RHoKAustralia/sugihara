@@ -74,7 +74,14 @@ a {
     font-weight: 500;
 }
 
-.coll
+.btn {
+    background-color: darkseagreen;
+    color: white !important;
+}
+
+.btn:hover {
+    background-color: forestgreen;
+}
 
 /* From before */
 .header
