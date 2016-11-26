@@ -1,22 +1,20 @@
 /* CSS declarations go here */
 
+nav {
+    padding-left: 20px;
+    padding-right: 10px;
+    background: #ECE9E6; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #ECE9E6 , #FFFFFF); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #ECE9E6 , #FFFFFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 img {
-    width: 100px;
-    height: 100px;
+    padding-top: 10px;
+    height: 50px;
 }
 
-body, html
-{
-    background-color: #EDEDED !important;
-    color: #0077BE !important;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight: 100;
-}
-
-#map
-{
-   min-height: 450px;
-   min-width: 100%;
+a {
+    color: black !important;
 }
 
 .header

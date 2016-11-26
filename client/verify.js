@@ -1,7 +1,7 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 
-import './main.html';
+import './verify.html';
 
 var stringified;
 
@@ -17,7 +17,7 @@ Template.main.onRendered(function mainOnRendered()
 {
    if (Meteor.isClient)
    {
-      L.Icon.Default.imagePath = 'packages/bevanhunt_leaflet/images';
+      L.Icon.Default.imagePath = '../public/logo.png';
    }
 
 });
