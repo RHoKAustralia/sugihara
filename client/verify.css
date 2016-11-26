@@ -60,6 +60,12 @@ a {
     margin-right: 15px;
 }
 
+.collapsible {
+    box-shadow: none;
+    border-left: 0;
+    border-right: 0;
+}
+
 /* From before */
 .header
 {
