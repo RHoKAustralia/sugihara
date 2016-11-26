@@ -62,9 +62,19 @@ a {
 
 .collapsible {
     box-shadow: none;
-    border-left: 0;
-    border-right: 0;
+    border: 0;
 }
+.collapsible-header {
+    background-color: darkseagreen;
+    color: white;
+    border: 0;
+}
+
+.collapsible-header:hover {
+    font-weight: 500;
+}
+
+.coll
 
 /* From before */
 .header
