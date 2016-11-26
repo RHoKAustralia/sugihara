@@ -1,0 +1,39 @@
+/* CSS declarations go here */
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+body, html
+{
+    background-color: #EDEDED !important;
+    color: #0077BE !important;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 100;
+}
+
+#map
+{
+   min-height: 450px;
+   min-width: 100%;
+}
+
+.header
+{
+   background-color: #21c658 !important;
+   color: #FAFAFA !important;
+   padding-top: 6vh;
+   /*padding-left: 4vh;
+   padding-right: 4vh;*/
+}
+
+.footer-text
+{
+   font-size: 80% !important;
+}
+
+.header-subtitle
+{
+   font-size: 70% !important;
+}
