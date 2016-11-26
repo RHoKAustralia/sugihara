@@ -31,8 +31,33 @@ a {
 }
 
 #evidence {
-    padding-top: 2px;
+    padding: 0;
     background-color: white !important;
+}
+
+#evidence * {
+    margin-bottom: 15px;
+}
+
+#evidence > div > a:hover {
+    text-decoration: underline;
+}
+
+.evidence-top {
+    height: 5px;
+    width: 100%;
+    background: darkseagreen;
+    margin-bottom: 5px !important;
+}
+
+.evidence-section {
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.1) !important;
+}
+
+.evidence-padding {
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 /* From before */
