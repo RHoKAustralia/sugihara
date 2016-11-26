@@ -1,0 +1,93 @@
+<head>
+   <title>Sugihara!</title>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+
+<body>
+   {{> main}}
+</body>
+
+
+<template name="main">
+
+   <div class="container">
+
+      <div class="card-panel flow-text header">
+         <div class="row">
+            <div class="col">
+               <h4>Are you a duck?</h4>
+               <div class="header-subtitle">Quack quack quack.</div>
+            </div>
+         </div>
+      </div>
+
+      <ul class="collapsible" data-collapsible="accordion">
+         <li>
+            <div class="collapsible-header"><i class="material-icons">info</i>What is this about?</div>
+            <div class="collapsible-body">
+               <p><a href="http://google.com">Dolore Lorem</a> consequat sunt culpa occaecat velit pariatur esse nulla quis incididunt nulla ullamco. Veniam eu aliqua amet reprehenderit sunt velit laboris eiusmod velit velit. Culpa ea ad consequat mollit ipsum commodo ut sit.<br><br>
+
+               Quis nulla deserunt tempor nulla culpa anim ut. Magna quis ut sunt eu aliqua esse voluptate mollit esse ex. Duis aliquip excepteur magna sunt elit ipsum magna adipisicing. Consequat elit proident laborum et enim minim culpa est nostrud nisi labore consectetur ea quis tempor quis. Qui velit eiusmod tempor tempor consectetur aliqua eiusmod sit laborum nisi nisi amet ipsum elit. Labore labore nisi elit laboris consectetur dolore ullamco proident excepteur.</p>
+            </div>
+         </li>
+      </ul>
+
+
+      <div class="card-panel grey lighten-4 flow-text hoverable">
+         <div class="row">
+            <p class="col s12 text-lighten-1" >
+               Please add details on your evidence below.
+            </p>
+            <form class="col s12">
+               <div class="row">
+                  <div class="input-field col s12">
+                     <textarea placeholder="http://twitter.com/awesome-tweet-about-ducks" id="comments" class="materialize-textarea"></textarea>
+                     <label for="comments">Link</label>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="input-field col s12">
+                     <textarea placeholder="E.g., That tweet is about poor stranded cows in Christchurch" id="comments" class="materialize-textarea"></textarea>
+                     <label for="comments">Comments</label>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="input-field col s12 m6 l6">
+                     <input id="name" type="text" class="validate">
+                     <label for="name">Name</label>
+                  </div>
+                  <div class="input-field col s12 m6 l6">
+                     <input id="postcode" type="text" class="validate">
+                     <label for="postcode">Postcode</label>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="input-field col s12 m6 l6">
+                     <input id="email" type="text" class="validate">
+                     <label for="email">Email</label>
+                  </div>
+                  <div class="input-field col s12 m6 l6">
+                     <input id="contact" type="text" class="validate">
+                     <label for="contact">Contact Number</label>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+
+      <div class="right-align" style="padding-top:1vh">
+         <a class="waves-effect waves-light btn-large blue darken-2" data-action="submit-suggest"><i class="material-icons right">send</i>Submit Suggestion</a>
+      </div>
+
+      <br>
+
+      <div class="card-panel grey lighten-4 flow-text footer-text right-align" style="margin-top:40vh !important">
+         <p>Sanity check counter: {{counter}} times.<br>
+            Program Messages: {{message}}
+         </p>
+      </div>
+
+   </div>
+
+</template>
