@@ -5,7 +5,7 @@ import './verify.html';
 
 var stringified;
 
-Template.main.onCreated(function mainOnCreated() {
+Template.verify.onCreated(function mainOnCreated() {
      this.counter = new ReactiveVar(0);
      this.message = new ReactiveVar("");
      this.map;
@@ -13,7 +13,7 @@ Template.main.onCreated(function mainOnCreated() {
     
 });
 
-Template.main.onRendered(function mainOnRendered()
+Template.verify.onRendered(function mainOnRendered()
 {
    if (Meteor.isClient)
    {
@@ -22,7 +22,7 @@ Template.main.onRendered(function mainOnRendered()
 
 });
 
-Template.main.helpers({
+Template.verify.helpers({
   counter() {
     return Template.instance().counter.get();
   },
@@ -38,4 +38,4 @@ Template.main.helpers({
     instance.message.set("you pressed the html button");
   },*/
       
-Template.main.events({});
+Template.verify.events({});
