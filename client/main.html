@@ -6,26 +6,32 @@
 </head>
 
 <body>
-    {{> main}}
-    {{> test}}
+    {{> App_body}}
 </body>
 
+
+<template name="App_body">
+  {{> Template.dynamic template=main}}
+</template>
+
+
 <template name="main">
+
+  {{> Navbar}}
 
    <div class="container">
 
       <div class="card-panel flow-text header">
          <div class="row">
             <div class="col">
-               <h4>Are you a duck?</h4>
-               <div class="header-subtitle">Quack quack quack.</div>
+               <h4>See anything dodgy?</h4>
             </div>
          </div>
       </div>
 
       <ul class="collapsible" data-collapsible="accordion">
          <li>
-            <div class="collapsible-header"><i class="material-icons">info</i>What is this about?</div>
+            <div class="collapsible-header"><i class="material-icons">info</i>Help us improve this information and help the people in need!</div>
             <div class="collapsible-body">
                <p><a href="http://google.com">Dolore Lorem</a> consequat sunt culpa occaecat velit pariatur esse nulla quis incididunt nulla ullamco. Veniam eu aliqua amet reprehenderit sunt velit laboris eiusmod velit velit. Culpa ea ad consequat mollit ipsum commodo ut sit.<br><br>
 
@@ -77,101 +83,38 @@
          </div>
       </div>
 
-      <div class="right-align" style="padding-top:1vh">
-         <a id="submit-button" class="waves-effect waves-light btn-large blue darken-2" data-action="submit-suggest"><i class="material-icons right">send</i>Submit Suggestion</a>
-      </div>
-
-      <br>
-
-      <div class="card-panel grey lighten-4 flow-text footer-text right-align" style="margin-top:40vh !important">
-         <p>Sanity check counter: {{counter}} times.<br>
-            Program Messages: {{message}}
-         </p>
-      </div>
+      {{> App_footer}}
 
    </div>
-
 </template>
 
-<template name="test">
 
-   <div class="container">
+<template name="App_footer">
+  <div class="right-align" style="padding-top:1vh">
+     <a id="submit-button" class="waves-effect waves-light btn-large blue darken-2" data-action="submit-suggest"><i class="material-icons right">send</i>Submit Suggestion</a>
+  </div>
 
-      <div class="card-panel flow-text header">
-         <div class="row">
-            <div class="col">
-               <h4>Are you a duck?</h4>
-               <div class="header-subtitle">Quack quack quack.</div>
-            </div>
-         </div>
-      </div>
+  <br>
 
-      <ul class="collapsible" data-collapsible="accordion">
-         <li>
-            <div class="collapsible-header"><i class="material-icons">info</i>What is this about?</div>
-            <div class="collapsible-body">
-               <p><a href="http://google.com">Dolore Lorem</a> consequat sunt culpa occaecat velit pariatur esse nulla quis incididunt nulla ullamco. Veniam eu aliqua amet reprehenderit sunt velit laboris eiusmod velit velit. Culpa ea ad consequat mollit ipsum commodo ut sit.<br><br>
+  <div class="card-panel grey lighten-4 flow-text footer-text right-align" style="margin-top:40vh !important">
+     <p>Sanity check counter: {{counter}} times.<br>
+        Program Messages: {{message}}
+     </p>
+  </div>
+</template>
 
-               Quis nulla deserunt tempor nulla culpa anim ut. Magna quis ut sunt eu aliqua esse voluptate mollit esse ex. Duis aliquip excepteur magna sunt elit ipsum magna adipisicing. Consequat elit proident laborum et enim minim culpa est nostrud nisi labore consectetur ea quis tempor quis. Qui velit eiusmod tempor tempor consectetur aliqua eiusmod sit laborum nisi nisi amet ipsum elit. Labore labore nisi elit laboris consectetur dolore ullamco proident excepteur.</p>
-            </div>
-         </li>
-      </ul>
-
-
-      <div class="card-panel grey lighten-4 flow-text hoverable">
-         <div class="row">
-            <p class="col s12 text-lighten-1" >
-               Please add details on your evidence below.
-            </p>
-            <form class="col s12">
-               <div class="row">
-                  <div class="input-field col s12">
-                     <textarea placeholder="http://twitter.com/awesome-tweet-about-ducks" id="link-test" class="materialize-textarea"></textarea>
-                     <label for="comments">Link</label>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="input-field col s12">
-                     <textarea placeholder="E.g., That tweet is about poor stranded cows in Christchurch" id="comments-test" class="materialize-textarea"></textarea>
-                     <label for="comments">Comments</label>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="input-field col s12 m6 l6">
-                     <input id="name-test" type="text" class="validate">
-                     <label for="name">Name</label>
-                  </div>
-                  <div class="input-field col s12 m6 l6">
-                     <input id="postcode-test" type="text" class="validate">
-                     <label for="postcode">Postcode</label>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="input-field col s12 m6 l6">
-                     <input id="email-test" type="text" class="validate">
-                     <label for="email">Email</label>
-                  </div>
-                  <div class="input-field col s12 m6 l6">
-                     <input id="contact-test" type="text" class="validate">
-                     <label for="contact">Contact Number</label>
-                  </div>
-               </div>
-            </form>
-         </div>
-      </div>
-
-      <div class="right-align" style="padding-top:1vh">
-         <a id="submit-button-test" class="waves-effect waves-light btn-large blue darken-2" data-action="submit-suggest"><i class="material-icons right">send</i>Submit Suggestion</a>
-      </div>
-
-      <br>
-
-      <div class="card-panel grey lighten-4 flow-text footer-text right-align" style="margin-top:40vh !important">
-         <p>Sanity check counter: {{counter}} times.<br>
-            Program Messages: {{message}}
-         </p>
-      </div>
-
-   </div>
-
+<template name="Navbar">
+  <div class="navbar-fixed">
+      <nav>
+          <div class="nav-wrapper">
+              <a href="#!" class="brand-logo"><img src="logo.png" alt="Sugihara"></a>
+              <ul class="right hide-on-med-and-down">
+                  <li><a href="#">Existing Issues</a></li>
+                  <li><a href="#">Post an Issue</a></li>
+                  <li><a href="#">My Profile</a></li>
+                  <li><a href="#">About</a></li>
+              </ul>
+          </div>
+      </nav>
+  </div>
 </template>

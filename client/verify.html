@@ -1,33 +1,10 @@
-<head>
-   <title>Sugihara!</title>
-    <!--
-   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    -->
-</head>
-
-<body>
-    {{> verify}}
-</body>
 
 <template name="verify">
 
-    <div class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper">
-                <a href="#!" class="brand-logo"><img src="logo.png" alt="Sugihara"></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="#">Existing Issues</a></li>
-                    <li><a href="#">Post an Issue</a></li>
-                    <li><a href="#">My Profile</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-    
+    {{> Navbar}}
+
     <div class="container">
-        
+
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="card-panel hoverable center-align">
@@ -36,9 +13,9 @@
                         There are reports of roads being blocked due to flooding in Victoria and NSW.
                     </span>
                 </div>
-            </div>    
+            </div>
         </div>
-        
+
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="card-panel center-align" id="evidence">
@@ -79,26 +56,8 @@
             </div>
         </div>
 
-    
+        {{> App_footer}}
+
     </div>
-        
-    
+
 </template>
-        <!--
-      <div class="card-panel flow-text header">
-         <div class="row">
-            <div class="col">
-               <h4>Are you a duck?</h4>
-               <div class="header-subtitle">Quack quack quack.</div>
-            </div>
-         </div>
-      </div>
-
-      <div class="card-panel grey lighten-4 flow-text footer-text right-align" style="margin-top:40vh !important">
-         <p>Sanity check counter: {{counter}} times.<br>
-            Program Messages: {{message}}
-         </p>
-      </div>
-        -->
-        
-

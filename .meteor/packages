@@ -23,3 +23,5 @@ materialize:materialize
 bevanhunt:leaflet
 tarang:ssl
 kadira:flow-router
+zimme:active-route
+kadira:blaze-layout
