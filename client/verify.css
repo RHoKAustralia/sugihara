@@ -25,13 +25,14 @@ a {
     background-color: darkseagreen;
 }
 
-.card-panel.evidence {
-    background-color: white;
+.inline-block {
+    display: inline-block;
+    background: lightcoral !important;
 }
 
-.verify-text {
-    margin-top: 25px;
-    font-size: 18px;
+#evidence {
+    padding-top: 2px;
+    background-color: white !important;
 }
 
 /* From before */
