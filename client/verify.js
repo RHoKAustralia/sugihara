@@ -12,18 +12,18 @@ Template.verify.onCreated(function mainOnCreated() {
      this.counter = new ReactiveVar(0);
      this.message = new ReactiveVar("");
      this.map;
-    
-    
-});
 
-Template.verify.onRendered(function mainOnRendered()
-{
-   if (Meteor.isClient)
-   {
-      L.Icon.Default.imagePath = '../public/logo.png';
-   }
 
 });
+
+// Template.verify.onRendered(function mainOnRendered()
+// {
+//    if (Meteor.isClient)
+//    {
+//       L.Icon.Default.imagePath = '../public/logo.png';
+//    }
+//
+// });
 
 Template.verify.helpers({
   counter() {
@@ -40,7 +40,7 @@ Template.verify.helpers({
     instance.counter.set(instance.counter.get() + 1);
     instance.message.set("you pressed the html button");
   },*/
-      
+
 Template.verify.events({
     'click #submit'(event, instance) {
         var date = document.getElementById("date");
@@ -51,7 +51,7 @@ Template.verify.events({
         var twness = document.getElementById("twness"); // Trustworthiness
         var content = document.getElementById("content");
         var submit = document.getElementById("submit");
-        
+
         var evaluationData = {
             date: date.innerText,
             username: username.innerText,
@@ -61,38 +61,38 @@ Template.verify.events({
             twness: Number(twness.value),
             content: Number(content.value)
         };
-        
+
         console.log(evaluationData);
-        
+
         issue.addEvidence(evaluationData);
         issue.saveData();
     }
 });
 
 function Issue()
-{   
+{
     // PRIVATE ATTRIBUTES
     var evidenceList = [];
-    
+
     // PUBLIC METHODS
     this.viewEvidence = function() {
         return evidenceList;
     }
-    
+
     this.addEvidence = function(obj) {
         evidenceList.push(obj);
     }
-    
+
     this.saveData = function() {
         var issuesJSON = JSON.stringify(evidenceList);
         localStorage.setItem(STORAGE_KEY, issuesJSON);
     }
-    
+
     // PRIVATE METHODS
     function loadData() {
         console.log("Data loading begins");
         var issuesJSON = localStorage.getItem(STORAGE_KEY);
-        
+
         // Check if app data is present in local storage
         if (issuesJSON)
         {
@@ -101,7 +101,7 @@ function Issue()
             evidenceList = issuesParsed;
         }
     }
-    
+
     // RUN ON INITIALISE
     loadData();
 }
