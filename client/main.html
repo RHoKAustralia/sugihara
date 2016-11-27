@@ -1,22 +1,19 @@
 <head>
     <title>Sugihara!</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- <link href="main.css" rel="stylesheet"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 </head>
 
 <body>
-    {{> main}}
-    {{> App_body}}
+   {{> navigation}}
+   {{> main}}
+
+   <br><br><br><br><br><br><br><br><br>
+
+   {{> verify}}
 </body>
 
-
-<template name="App_body">
-  {{> Template.dynamic template=main}}
-</template>
-
-<template name="main">
-
+<template name="navigation">
    <div class="navbar-fixed">
       <nav>
          <div class="nav-wrapper">
@@ -30,6 +27,10 @@
          </div>
       </nav>
    </div>
+</template>
+
+
+<template name="main">
 
    <div class="container">
 
@@ -97,17 +98,9 @@
             </form>
          </div>
 
-         <div class="preview-area">
-            <span class="">
-               <br>
-               <br>
-               <br>
-               Awesome spot to show a preview of the above Tweet or Facebook Post
-               <br>
-               <br>
-               <br>
-            </span>
-         </div>
+         <img class="materialboxed tweet" src="tweet-example.png"
+         data-caption="An example tweet">
+
       </div>
 
       {{> App_footer}}
@@ -118,13 +111,5 @@
 <template name="App_footer">
    <div class="right-align" style="padding-top:1vh">
       <a id="submit-button" class="waves-effect waves-light btn-large interaction" data-action="submit-suggest"><i class="material-icons right">send</i>Submit Suggestion</a>
-   </div>
-
-   <br>
-
-   <div class="card-panel grey lighten-4 flow-text footer-text right-align" style="margin-top:40vh !important">
-      <p>Sanity check counter: {{counter}} times.<br>
-         Program Messages: {{message}}
-      </p>
    </div>
 </template>

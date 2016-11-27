@@ -33,21 +33,12 @@ Template.main.events({
       // This code runs when submit is clicked
       console.log("Submit clicked!");
 
-      var linkRef = document.getElementById("link");
-      var commentsRef = document.getElementById("comments");
-
-      var nameRef = document.getElementById("name");
-      var postcodeRef = document.getElementById("postcode");
-      var emailRef = document.getElementById("email");
-      var contactRef = document.getElementById("contact");
-
       var formData = {
-          link: linkRef.value,
-          comments: commentsRef.value,
-          name: nameRef.value,
-          postcode: postcodeRef.value,
-          email: emailRef.value,
-          contact: contactRef.value
+         link: document.getElementById("link").value,
+         author: document.getElementById("author").value,
+         postcode: document.getElementById("postcode").value,
+         tags: document.getElementById("tags").value,
+         importance:  document.getElementById("importance").value,
       };
 
       stringified = JSON.stringify(formData);
