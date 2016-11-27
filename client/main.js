@@ -9,64 +9,14 @@ var stringified;
 Template.main.onCreated(function mainOnCreated() {
      this.counter = new ReactiveVar(0);
      this.message = new ReactiveVar("");
-     this.map;
-
-
 });
-
-// Template.test.onCreated(function mainOnCreated() {
-//      this.counter = new ReactiveVar(0);
-//      this.message = new ReactiveVar("");
-//      this.map;
-// });
 
 Template.main.onRendered(function mainOnRendered()
 {
    if (Meteor.isClient)
    {
-      L.Icon.Default.imagePath = 'packages/bevanhunt_leaflet/images';
-
-      var bgn = [-37.802470, 144.966725];
-      var map = Template.instance().map;
-      var opt = { doubleClickZoom: true,
-                  zoomControl: false,
-                  touchZoom: true,
-                  scrollWheelZoom: true,
-                  maxZoom: 20 }
-      map = L.map('map', opt)
-         .setView(bgn, 13);
-
-      L.tileLayer.provider('Thunderforest.Transport').addTo(map);
-
-      // var bgnMsg = "<b>Hello!</b><br>Search a location above.<br>Pinpoint your current location with the button below.";
-      // var marker = L.marker(bgn);
-      // marker.addTo(map);
-      // marker.bindPopup(bgnMsg).openPopup();
-
-      L.control.zoom().setPosition('bottomright').addTo(map);
-
-      var popup = L.popup();
-
-      map.on('click', function(e){
-         popup
-             .setLatLng(e.latlng)
-             .setContent("This location is:<br>" + e.latlng.toString())
-             .openOn(map);
-      });
-
-      var circle = L.circle([-37.78998, 144.93662], 500, {
-         color: 'red',
-         fillColor: '#f03',
-         fillOpacity: 0.5
-      });
-      circle.addTo(map);
-      circle.bindPopup("I am a circle.");
-
-
-      Template.instance().message.set("Map Loaded");
-      Template.instance().map = map;
+      console.log("Rendered!")
    }
-
 });
 
 Template.main.helpers({
@@ -77,65 +27,6 @@ Template.main.helpers({
     return Template.instance().message.get();
   },
 });
-
-// Template.test.onRendered(function mainOnRendered()
-// {
-//    if (Meteor.isClient)
-//    {
-//       L.Icon.Default.imagePath = 'packages/bevanhunt_leaflet/images';
-//
-//       var bgn = [-37.802470, 144.966725];
-//       var map = Template.instance().map;
-//       var opt = { doubleClickZoom: true,
-//                   zoomControl: false,
-//                   touchZoom: true,
-//                   scrollWheelZoom: true,
-//                   maxZoom: 20 }
-//       map = L.map('map', opt)
-//          .setView(bgn, 13);
-//
-//       L.tileLayer.provider('Thunderforest.Transport').addTo(map);
-//
-//       // var bgnMsg = "<b>Hello!</b><br>Search a location above.<br>Pinpoint your current location with the button below.";
-//       // var marker = L.marker(bgn);
-//       // marker.addTo(map);
-//       // marker.bindPopup(bgnMsg).openPopup();
-//
-//       L.control.zoom().setPosition('bottomright').addTo(map);
-//
-//       var popup = L.popup();
-//
-//       map.on('click', function(e){
-//          popup
-//              .setLatLng(e.latlng)
-//              .setContent("This location is:<br>" + e.latlng.toString())
-//              .openOn(map);
-//       });
-//
-//       var circle = L.circle([-37.78998, 144.93662], 500, {
-//          color: 'red',
-//          fillColor: '#f03',
-//          fillOpacity: 0.5
-//       });
-//       circle.addTo(map);
-//       circle.bindPopup("I am a circle.");
-//
-//
-//       Template.instance().message.set("Map Loaded");
-//       Template.instance().map = map;
-//    }
-//
-// });
-//
-// Template.test.helpers({
-//   counter() {
-//     return Template.instance().counter.get();
-//   },
-//   message() {
-//     return Template.instance().message.get();
-//   },
-// });
-
 
 Template.main.events({
   'click #submit-button'(event, instance) {
@@ -168,37 +59,3 @@ Template.main.events({
     instance.message.set("you pressed the nice button");
   },
 });
-
-// Template.test.events({
-//   'click #submit-button-test'(event, instance) {
-//       // This code runs when submit is clicked
-//       console.log("Submit clicked!");
-//
-//       var linkRefTest = document.getElementById("link-test");
-//       var commentsRefTest = document.getElementById("comments-test");
-//
-//       var nameRefTest = document.getElementById("name-test");
-//       var postcodeRefTest = document.getElementById("postcode-test");
-//       var emailRefTest = document.getElementById("email-test");
-//       var contactRefTest = document.getElementById("contact-test");
-//
-//       var formData = JSON.parse(stringified);
-//       console.log(linkRefTest);
-//
-//       console.log(formData);
-//
-//
-//       linkRefTest.value = formData.link;
-//       commentsRefTest.value = formData.comments;
-//
-//       nameRefTest.value = formData.name;
-//       postcodeRefTest.value = formData.postcode;
-//       emailRefTest.value = formData.email;
-//       contactRefTest.value = formData.contact;
-//   },
-//
-//   "click [data-action='polka']"(event, instance) {
-//     instance.counter.set(instance.counter.get() + 1);
-//     instance.message.set("you pressed the nice button");
-//   },
-// });
