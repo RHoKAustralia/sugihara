@@ -1,167 +1,111 @@
 <head>
     <title>Sugihara!</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="verify.css" rel="stylesheet">
+    <!-- <link href="main.css" rel="stylesheet"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 </head>
 
 <body>
     {{> main}}
-    {{> test}}
 </body>
 
 <template name="main">
 
-   <div class="container">
-
-      <div class="card-panel flow-text header">
-         <div class="row">
-            <div class="col">
-               <h4>Are you a duck?</h4>
-               <div class="header-subtitle">Quack quack quack.</div>
-            </div>
-         </div>
-      </div>
-
-      <ul class="collapsible" data-collapsible="accordion">
-         <li>
-            <div class="collapsible-header"><i class="material-icons">info</i>What is this about?</div>
-            <div class="collapsible-body">
-               <p><a href="http://google.com">Dolore Lorem</a> consequat sunt culpa occaecat velit pariatur esse nulla quis incididunt nulla ullamco. Veniam eu aliqua amet reprehenderit sunt velit laboris eiusmod velit velit. Culpa ea ad consequat mollit ipsum commodo ut sit.<br><br>
-
-               Quis nulla deserunt tempor nulla culpa anim ut. Magna quis ut sunt eu aliqua esse voluptate mollit esse ex. Duis aliquip excepteur magna sunt elit ipsum magna adipisicing. Consequat elit proident laborum et enim minim culpa est nostrud nisi labore consectetur ea quis tempor quis. Qui velit eiusmod tempor tempor consectetur aliqua eiusmod sit laborum nisi nisi amet ipsum elit. Labore labore nisi elit laboris consectetur dolore ullamco proident excepteur.</p>
-            </div>
-         </li>
-      </ul>
-
-
-      <div class="card-panel grey lighten-4 flow-text hoverable">
-         <div class="row">
-            <p class="col s12 text-lighten-1" >
-               Please add details on your evidence below.
-            </p>
-            <form class="col s12">
-               <div class="row">
-                  <div class="input-field col s12">
-                     <textarea placeholder="http://twitter.com/awesome-tweet-about-ducks" id="link" class="materialize-textarea"></textarea>
-                     <label for="comments">Link</label>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="input-field col s12">
-                     <textarea placeholder="E.g., That tweet is about poor stranded cows in Christchurch" id="comments" class="materialize-textarea"></textarea>
-                     <label for="comments">Comments</label>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="input-field col s12 m6 l6">
-                     <input id="name" type="text" class="validate">
-                     <label for="name">Name</label>
-                  </div>
-                  <div class="input-field col s12 m6 l6">
-                     <input id="postcode" type="text" class="validate">
-                     <label for="postcode">Postcode</label>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="input-field col s12 m6 l6">
-                     <input id="email" type="text" class="validate">
-                     <label for="email">Email</label>
-                  </div>
-                  <div class="input-field col s12 m6 l6">
-                     <input id="contact" type="text" class="validate">
-                     <label for="contact">Contact Number</label>
-                  </div>
-               </div>
-            </form>
-         </div>
-      </div>
-
-      <div class="right-align" style="padding-top:1vh">
-         <a id="submit-button" class="waves-effect waves-light btn-large blue darken-2" data-action="submit-suggest"><i class="material-icons right">send</i>Submit Suggestion</a>
-      </div>
-
-      <br>
-
-      <div class="card-panel grey lighten-4 flow-text footer-text right-align" style="margin-top:40vh !important">
-         <p>Sanity check counter: {{counter}} times.<br>
-            Program Messages: {{message}}
-         </p>
-      </div>
-
+   <div class="navbar-fixed">
+      <nav>
+           <div class="nav-wrapper">
+               <a href="#!" class="brand-logo"><img src="logo.png" alt="Sugihara"></a>
+               <ul class="right hide-on-med-and-down">
+                   <li><a href="#">Existing Issues</a></li>
+                   <li><a href="#">Post an Issue</a></li>
+                   <li><a href="#">My Profile</a></li>
+                   <li><a href="#">About</a></li>
+               </ul>
+           </div>
+      </nav>
    </div>
 
-</template>
-
-<template name="test">
-
    <div class="container">
 
-      <div class="card-panel flow-text header">
+   <div class="row">
+       <div class="col s12 m12 l12">
+           <div class="card-panel hoverable center-align">
+               <span class="white-text">
+                  <h5>Report evidence</h5>
+                  Seen something online that you think might help? Tell us about it below.
+               </span>
+           </div>
+       </div>
+   </div>
+
+      <div class="card-panel center-align flow-text white">
          <div class="row">
-            <div class="col">
-               <h4>Are you a duck?</h4>
-               <div class="header-subtitle">Quack quack quack.</div>
-            </div>
-         </div>
-      </div>
-
-      <ul class="collapsible" data-collapsible="accordion">
-         <li>
-            <div class="collapsible-header"><i class="material-icons">info</i>What is this about?</div>
-            <div class="collapsible-body">
-               <p><a href="http://google.com">Dolore Lorem</a> consequat sunt culpa occaecat velit pariatur esse nulla quis incididunt nulla ullamco. Veniam eu aliqua amet reprehenderit sunt velit laboris eiusmod velit velit. Culpa ea ad consequat mollit ipsum commodo ut sit.<br><br>
-
-               Quis nulla deserunt tempor nulla culpa anim ut. Magna quis ut sunt eu aliqua esse voluptate mollit esse ex. Duis aliquip excepteur magna sunt elit ipsum magna adipisicing. Consequat elit proident laborum et enim minim culpa est nostrud nisi labore consectetur ea quis tempor quis. Qui velit eiusmod tempor tempor consectetur aliqua eiusmod sit laborum nisi nisi amet ipsum elit. Labore labore nisi elit laboris consectetur dolore ullamco proident excepteur.</p>
-            </div>
-         </li>
-      </ul>
-
-
-      <div class="card-panel grey lighten-4 flow-text hoverable">
-         <div class="row">
-            <p class="col s12 text-lighten-1" >
-               Please add details on your evidence below.
-            </p>
+            <div class="evidence-top"></div>
             <form class="col s12">
                <div class="row">
-                  <div class="input-field col s12">
-                     <textarea placeholder="http://twitter.com/awesome-tweet-about-ducks" id="link-test" class="materialize-textarea"></textarea>
-                     <label for="comments">Link</label>
+                  <div class="input-field col s12 m8 l8">
+                     <input id="link" type="text" class="validate">
+                     <label for="link">Link</label>
+                  </div>
+                  <div class="input-field col s12 m4 l4">
+                     <input placeholder="Sydney Morning Herald"
+                     id="author" type="text" class="validate">
+                     <label for="author">Author</label>
                   </div>
                </div>
                <div class="row">
-                  <div class="input-field col s12">
-                     <textarea placeholder="E.g., That tweet is about poor stranded cows in Christchurch" id="comments-test" class="materialize-textarea"></textarea>
-                     <label for="comments">Comments</label>
+                  <div class="input-field col s12 m4 l4">
+                     <input placeholder="E.g., 3040, Hawthorn"
+                     id="postcode" type="text" class="validate">
+                     <label for="postcode">Location</label>
+                  </div>
+                  <div class="input-field col s12 m8 l8">
+                     <input placeholder="#earthquake, #christchurch"
+                     id="tags" type="text" class="validate">
+                     <label for="tags">Tags</label>
                   </div>
                </div>
-               <div class="row">
-                  <div class="input-field col s12 m6 l6">
-                     <input id="name-test" type="text" class="validate">
-                     <label for="name">Name</label>
+
+               <!-- <div>Importance</div> -->
+               <!-- Importance -->
+                  <div class="row">
+                     <div class="col s12 m4 l4 slider-notation">Importance of the link above</div>
+                     <div class="col s1 m1 l1 slider-notation">
+                        1
+                     </div>
+                     <div class="col s10 m6 l6">
+                        <input class="interaction "
+                        type="range" id="importance" min="1" max="5" step="1" value="1" list="steplist">
+                            <datalist id="steplist">
+                               <option>1</option>
+                               <option>2</option>
+                               <option>3</option>
+                               <option>4</option>
+                               <option>5</option>
+                           </datalist>
+                     </div>
+                     <div class="col s1 m1 l1 slider-notation">
+                        5
+                     </div>
                   </div>
-                  <div class="input-field col s12 m6 l6">
-                     <input id="postcode-test" type="text" class="validate">
-                     <label for="postcode">Postcode</label>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="input-field col s12 m6 l6">
-                     <input id="email-test" type="text" class="validate">
-                     <label for="email">Email</label>
-                  </div>
-                  <div class="input-field col s12 m6 l6">
-                     <input id="contact-test" type="text" class="validate">
-                     <label for="contact">Contact Number</label>
-                  </div>
-               </div>
             </form>
+         </div>
+
+         <div class="preview-area">
+            <span class="">
+               <br>
+               <br>
+               <br>
+                Awesome spot to show a preview of the above Tweet or Facebook Post
+               <br>
+               <br>
+               <br>
+            </span>
          </div>
       </div>
 
       <div class="right-align" style="padding-top:1vh">
-         <a id="submit-button-test" class="waves-effect waves-light btn-large blue darken-2" data-action="submit-suggest"><i class="material-icons right">send</i>Submit Suggestion</a>
+         <a id="submit-button" class="waves-effect waves-light btn-large interaction" data-action="submit-suggest"><i class="material-icons right">send</i>Submit Suggestion</a>
       </div>
 
       <br>

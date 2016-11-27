@@ -1,24 +1,89 @@
 /* CSS declarations go here */
 
-body, html
-{
-    background-color: #EDEDED !important;
-    color: #0077BE !important;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight: 100;
+.container {
+    padding-top: 25px;
 }
 
-#map
-{
-   min-height: 450px;
-   min-width: 100%;
+nav {
+    padding-left: 20px;
+    padding-right: 10px;
+    background: #ECE9E6; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #ECE9E6 , #FFFFFF); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #ECE9E6 , #FFFFFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+img {
+    padding-top: 10px;
+    height: 50px;
+}
+
+a {
+    color: black !important;
+}
+
+.card-panel {
+    background-color: darkseagreen;
+    padding-top: 10px;
+}
+
+.inline-block {
+    display: inline-block;
+    background: lightcoral !important;
+}
+
+#evidence {
+    padding: 0;
+    background-color: white !important;
+}
+
+#evidence * {
+    margin-bottom: 15px;
+}
+
+#evidence > div > a:hover {
+    text-decoration: underline;
+}
+
+.evidence-top {
+    height: 5px;
+    width: 100%;
+    background: darkseagreen;
+    margin-bottom: 5px !important;
+}
+
+.evidence-section {
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.1) !important;
+}
+
+.evidence-padding {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.collapsible {
+    box-shadow: none;
+    border: 0;
+}
+
+.collapsible-header {
+    background-color: darkseagreen;
+    color: white;
+    border: 0;
+}
+
+.collapsible-header:hover {
+    font-weight: 500;
+}
+
+
+
+/* From before */
 .header
 {
-   background-color: #21c658 !important;
-   color: #FAFAFA !important;
-   padding-top: 6vh;
+   background-color: #7DB27B;
+   color: white;
+   /*padding-top: 6vh;*/
    /*padding-left: 4vh;
    padding-right: 4vh;*/
 }
@@ -31,4 +96,29 @@ body, html
 .header-subtitle
 {
    font-size: 70% !important;
+}
+
+@media (max-width: 600px) {
+    #link {
+        font-size: 12px;
+    }
+}
+
+.preview-area
+{
+   font-size: 60% !important;
+   color: grey;
+}
+
+.slider-notation
+{
+   font-size: 70% !important;
+   color: grey;
+   margin-top: 11px;
+}
+
+.interaction
+{
+   background-color: #7DB27B;
+   color: grey;
 }
