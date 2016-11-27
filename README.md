@@ -11,14 +11,14 @@ emergency.
 
 People
 ======
-- Nick
+- [Nick](https://au.linkedin.com/in/nick-williams-7a941168)
 - Sasha
 - Kristen
 - Mike
 - Fida
-- Marko
+- [Marko](https://github.com/MarkoDiUS)
 - Anthony
-- Aryaman
+- [Aryaman](https://www.linkedin.com/in/aryaman-pandav)
 - [Mardi](https://github.com/ma-al)
 
 Requirements
