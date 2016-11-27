@@ -7,36 +7,42 @@
 
 <body>
     {{> main}}
+    {{> App_body}}
 </body>
+
+
+<template name="App_body">
+  {{> Template.dynamic template=main}}
+</template>
 
 <template name="main">
 
    <div class="navbar-fixed">
       <nav>
-           <div class="nav-wrapper">
-               <a href="#!" class="brand-logo"><img src="logo.png" alt="Sugihara"></a>
-               <ul class="right hide-on-med-and-down">
-                   <li><a href="#">Existing Issues</a></li>
-                   <li><a href="#">Post an Issue</a></li>
-                   <li><a href="#">My Profile</a></li>
-                   <li><a href="#">About</a></li>
-               </ul>
-           </div>
+         <div class="nav-wrapper">
+            <a href="#!" class="brand-logo"><img src="logo.png" alt="Sugihara"></a>
+            <ul class="right hide-on-med-and-down">
+               <li><a href="#">Existing Issues</a></li>
+               <li><a href="#">Post an Issue</a></li>
+               <li><a href="#">My Profile</a></li>
+               <li><a href="#">About</a></li>
+            </ul>
+         </div>
       </nav>
    </div>
 
    <div class="container">
 
-   <div class="row">
-       <div class="col s12 m12 l12">
-           <div class="card-panel hoverable center-align">
+      <div class="row">
+         <div class="col s12 m12 l12">
+            <div class="card-panel hoverable center-align">
                <span class="white-text">
                   <h5>Report evidence</h5>
                   Seen something online that you think might help? Tell us about it below.
                </span>
-           </div>
-       </div>
-   </div>
+            </div>
+         </div>
+      </div>
 
       <div class="card-panel center-align flow-text white">
          <div class="row">
@@ -68,26 +74,26 @@
 
                <!-- <div>Importance</div> -->
                <!-- Importance -->
-                  <div class="row">
-                     <div class="col s12 m4 l4 slider-notation">Importance of the link above</div>
-                     <div class="col s1 m1 l1 slider-notation">
-                        1
-                     </div>
-                     <div class="col s10 m6 l6">
-                        <input class="interaction "
-                        type="range" id="importance" min="1" max="5" step="1" value="1" list="steplist">
-                            <datalist id="steplist">
-                               <option>1</option>
-                               <option>2</option>
-                               <option>3</option>
-                               <option>4</option>
-                               <option>5</option>
-                           </datalist>
-                     </div>
-                     <div class="col s1 m1 l1 slider-notation">
-                        5
-                     </div>
+               <div class="row">
+                  <div class="col s12 m4 l4 slider-notation">Importance of the link above</div>
+                  <div class="col s1 m1 l1 slider-notation">
+                     1
                   </div>
+                  <div class="col s10 m6 l6">
+                     <input class="interaction "
+                     type="range" id="importance" min="1" max="5" step="1" value="1" list="steplist">
+                     <datalist id="steplist">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                     </datalist>
+                  </div>
+                  <div class="col s1 m1 l1 slider-notation">
+                     5
+                  </div>
+               </div>
             </form>
          </div>
 
@@ -96,7 +102,7 @@
                <br>
                <br>
                <br>
-                Awesome spot to show a preview of the above Tweet or Facebook Post
+               Awesome spot to show a preview of the above Tweet or Facebook Post
                <br>
                <br>
                <br>
@@ -104,18 +110,21 @@
          </div>
       </div>
 
-      <div class="right-align" style="padding-top:1vh">
-         <a id="submit-button" class="waves-effect waves-light btn-large interaction" data-action="submit-suggest"><i class="material-icons right">send</i>Submit Suggestion</a>
-      </div>
-
-      <br>
-
-      <div class="card-panel grey lighten-4 flow-text footer-text right-align" style="margin-top:40vh !important">
-         <p>Sanity check counter: {{counter}} times.<br>
-            Program Messages: {{message}}
-         </p>
-      </div>
+      {{> App_footer}}
 
    </div>
+</template>
 
+<template name="App_footer">
+   <div class="right-align" style="padding-top:1vh">
+      <a id="submit-button" class="waves-effect waves-light btn-large interaction" data-action="submit-suggest"><i class="material-icons right">send</i>Submit Suggestion</a>
+   </div>
+
+   <br>
+
+   <div class="card-panel grey lighten-4 flow-text footer-text right-align" style="margin-top:40vh !important">
+      <p>Sanity check counter: {{counter}} times.<br>
+         Program Messages: {{message}}
+      </p>
+   </div>
 </template>

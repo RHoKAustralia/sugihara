@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    {{> verify}}
+    {{> verify}} 
 </body>
 
 <template name="verify">
@@ -25,9 +25,9 @@
             </div>
         </nav>
     </div>
-    
+
     <div class="container">
-        
+
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="card-panel hoverable center-align">
@@ -36,19 +36,9 @@
                         There are reports of roads being blocked due to flooding in Victoria and NSW.
                     </span>
                 </div>
-            </div>    
-        </div>
-        
-        <div class="row">
-            <div class="col s12 m12 l12">
-                <div class="card-panel hoverable center-align">
-                    <span class="white-text">
-                        Help us verify evidence.
-                    </span>
-                </div>
             </div>
         </div>
-        
+
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="card-panel center-align" id="evidence">
@@ -67,20 +57,21 @@
                             <div class="collapsible-body">
                                 <div><b>Importance</b></div>
                                 <div class="evidence-padding">
-                                    <input type="range" id="importance" value="50">
+                                    <input type="range" id="importance" min="1" max="5" step="1" value="1">
                                 </div>
                                 <div><b>Author Location</b></div>
                                 <div class="evidence-padding">
-                                    <input type="range" id="location" value="50">
+                                    <input type="range" id="location" min="1" max="5" step="1" value="1">
                                 </div>
                                 <div><b>Trustworthiness</b></div>
                                 <div class="evidence-padding">
-                                    <input type="range" id="twness" value="50">
+                                    <input type="range" id="twness" min="1" max="5" step="1" value="1">
                                 </div>
                                 <div><b>Content</b></div>
                                 <div class="evidence-padding">
-                                    <input type="range" id="content" value="50">
+                                    <input type="range" id="content" min="1" max="5" step="1" value="1">
                                 </div>
+                                <a class="waves-effect waves-light btn" id="submit">Submit</a>
                             </div>
                         </li>
                     </ul>
@@ -88,10 +79,10 @@
             </div>
         </div>
 
-    
+
     </div>
-        
-    
+
+
 </template>
         <!--
       <div class="card-panel flow-text header">
@@ -109,5 +100,3 @@
          </p>
       </div>
         -->
-        
-

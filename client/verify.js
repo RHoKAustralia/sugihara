@@ -38,4 +38,29 @@ Template.verify.helpers({
     instance.message.set("you pressed the html button");
   },*/
       
-Template.verify.events({});
+Template.verify.events({
+    'click #submit'(event, instance) {
+        var date = document.getElementById("date");
+        var username = document.getElementById("username");
+        var evidenceLink = document.getElementById("link");
+        var importance = document.getElementById("importance");
+        var location = document.getElementById("location");
+        var twness = document.getElementById("twness"); // Trustworthiness
+        var content = document.getElementById("content");
+        var submit = document.getElementById("submit");
+        
+        var evaluationData = {
+            date: date.innerText,
+            username: username.innerText,
+            link: evidenceLink.innerText,
+            importance: Number(importance.value),
+            location: Number(location.value),
+            twness: Number(twness.value),
+            content: Number(content.value)
+        };
+        
+        console.log(evaluationData);
+        
+        stringified = JSON.stringify(evaluationData);
+    }
+});

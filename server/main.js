@@ -1,4 +1,5 @@
 import { Meteor } from 'meteor/meteor';
+import '../lib/evidence.js';
 
 Meteor.startup(() => {
    Meteor.startup(function() {
