@@ -61,7 +61,7 @@ Template.verify.events({
             twness: Number(twness.value),
             content: Number(content.value)
         };
-        
+
         console.log(evaluationData);
         
         issue.addEvidence(evaluationData);
