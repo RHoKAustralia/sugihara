@@ -18,12 +18,18 @@ img {
 }
 
 img.tweet{
-   height: 200px;
+   height: 210px;
 }
 
 @media (max-width: 800px) {
    img.tweet {
-      height: 100px;
+      height: 160px;
+   }
+}
+
+@media (max-width: 600px) {
+   img.tweet {
+      height: 120px;
    }
 }
 
