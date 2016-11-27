@@ -3,7 +3,10 @@ import { ReactiveVar } from 'meteor/reactive-var';
 
 import './verify.html';
 
-var stringified;
+var STORAGE_KEY = "issues";
+
+var issue = new Issue();
+console.log(issue.viewEvidence());
 
 Template.verify.onCreated(function mainOnCreated() {
      this.counter = new ReactiveVar(0);
@@ -61,6 +64,44 @@ Template.verify.events({
         
         console.log(evaluationData);
         
-        stringified = JSON.stringify(evaluationData);
+        issue.addEvidence(evaluationData);
+        issue.saveData();
     }
 });
+
+function Issue()
+{   
+    // PRIVATE ATTRIBUTES
+    var evidenceList = [];
+    
+    // PUBLIC METHODS
+    this.viewEvidence = function() {
+        return evidenceList;
+    }
+    
+    this.addEvidence = function(obj) {
+        evidenceList.push(obj);
+    }
+    
+    this.saveData = function() {
+        var issuesJSON = JSON.stringify(evidenceList);
+        localStorage.setItem(STORAGE_KEY, issuesJSON);
+    }
+    
+    // PRIVATE METHODS
+    function loadData() {
+        console.log("Data loading begins");
+        var issuesJSON = localStorage.getItem(STORAGE_KEY);
+        
+        // Check if app data is present in local storage
+        if (issuesJSON)
+        {
+            console.log("App data present");
+            var issuesParsed = JSON.parse(issuesJSON);
+            evidenceList = issuesParsed;
+        }
+    }
+    
+    // RUN ON INITIALISE
+    loadData();
+}
