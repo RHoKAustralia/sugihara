@@ -21,6 +21,8 @@ People
 - [Aryaman](https://www.linkedin.com/in/aryaman-pandav)
 - [Mardi](https://github.com/ma-al)
 
+![El Teamo](public/sugihara-team-rhok-nov.jpg)
+
 Requirements
 ============
 The code stands up a working site. There is one page showing the UI for:
