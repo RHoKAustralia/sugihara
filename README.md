@@ -13,9 +13,9 @@ People
 ======
 - [Nick](https://au.linkedin.com/in/nick-williams-7a941168)
 - Sasha
-- Kristen
+- Kristin
 - Mike
-- Fida
+- [Fida](https://www.linkedin.com/in/tafida/)
 - [Marko](https://github.com/MarkoDiUS)
 - Anthony
 - [Aryaman](https://www.linkedin.com/in/aryaman-pandav)
