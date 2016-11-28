@@ -11,15 +11,8 @@ emergency.
 
 People
 ======
-- [Nick](https://au.linkedin.com/in/nick-williams-7a941168)
-- Sasha
-- Kristin
-- Mike
-- [Fida](https://www.linkedin.com/in/tafida/)
-- [Marko](https://github.com/MarkoDiUS)
-- Anthony
-- [Aryaman](https://www.linkedin.com/in/aryaman-pandav)
-- [Mardi](https://github.com/ma-al)
+
+From left to right: Mike, [Fida](https://www.linkedin.com/in/tafida/), [Marko](https://github.com/MarkoDiUS), [Aryaman](https://www.linkedin.com/in/aryaman-pandav), [Mahathir](https://github.com/ma-al), Sasha, [Nick](https://au.linkedin.com/in/nick-williams-7a941168). *(Not in photo: Kristin, Anthony)*
 
 ![El Teamo](public/sugihara-team-rhok-nov.jpg)
 
